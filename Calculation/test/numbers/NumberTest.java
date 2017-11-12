@@ -16,8 +16,7 @@ public class NumberTest {
     }
     
     @BeforeClass
-    public static void setUpClass() {
-        
+    public static void setUpClass() {        
     }
     
     @AfterClass
@@ -61,5 +60,13 @@ public class NumberTest {
         
         boolean result = fraction1.isReduce();
         assertFalse(result);
+    }
+    
+    @Test
+    public void irreducibleFraction(){
+        Fraction fraction1 = new Fraction(10,5);
+        
+        Fraction result = fraction1.irreducible();
+        assertEquals(new Fraction(2,1), result);
     }
 }
